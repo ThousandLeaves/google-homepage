@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Google</title>
+</head>
+<style>
+   body {
+      font-family: arial, sans-serif;
+      font-size: 0.85em;
+      margin: 0;
+      padding: 0;
+
+   }
+
+   footer {
+      font-family: arial, sans-serif;
+      font-size: 0.85em;
+      margin: 0;
+      padding: 0;
+   }
+
+   .flex-container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+   }
+
+   .top-bar {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 3vh;
+      align-items: center;
+      /* VH means viewport */
+   }
+
+   .bot-bar-link {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 14px;
+   }
+
+   .bot-bar {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 4vh;
+      border-top: 1px solid #e4e4e4;
+      background-color: #f2f2f2;
+
+   }
+
+   .bot-bar a:active {
+      color: #dd4b39;
+      opacity: 100%;
+      outline: dotted;
+      outline-width: 1px;
+   }
+
+   a {
+      text-decoration: none;
+   }
+
+   a:hover {
+      text-decoration: underline;
+   }
+
+   a:active {
+      outline: none;
+   }
+
+   input[type="submit"] {
+      color: #5F6368;
+      border: 1px solid transparent;
+      border-radius: 4px;
+   }
+
+   input[type="submit"]:hover {
+      color: #222;
+      background-color: whitesmoke;
+      border: 1px solid #c6c6c6;
+      outline: none;
+   }
+
+   input[type="submit"]:focus {
+      border: 1px solid #4d90fe;
+   }
+
+   input::-moz-focus-inner {
+      border: 0;
+   }
+
+   .btns a {
+      padding-left: 15px;
+      opacity: 70%;
+      color: #000;
+   }
+
+   .bot-bar a {
+      padding-left: 15px;
+      opacity: 70%;
+      color: #000;
+   }
+
+   .logo {
+      margin: auto;
+      padding-top: 160px;
+      padding-bottom: 24px;
+   }
+
+   .search-area {
+      margin: auto;
+      width: auto;
+
+   }
+
+   .search-area input {
+      border: solid #DDD;
+      border-radius: 24px;
+      border-width: 1px;
+      width: 446px;
+      max-width: 446px;
+      height: 44px;
+      padding: 0px 20px 0px 20px;
+      font-size: 12pt;
+      /* border: none; */
+   }
+
+   .search-area input:hover {
+      box-shadow: 0px 1px 6px 0px #CCC;
+      border: 1px solid #FFF;
+   }
+
+   .s-btn {
+      padding-top: 28px;
+      margin: auto;
+      width: auto;
+   }
+
+   .s-btn input {
+      border-radius: 4px;
+      font-size: 14px;
+      height: 36px;
+      padding: 0px 16px 0px 16px;
+      font-family: arial, sans-serif;
+      /* border: 0px; */
+   }
+
+   .spacer {
+      width: 14px;
+   }
+
+   .pad-top {
+      padding-top: 16px;
+   }
+
+   .img-special {
+      background-image: url('/img/icons.png');
+      background-size: 528px 68px;
+      background-position: -132px -38px;
+      height: 30px;
+      width: 30px;
+      opacity: 50%;
+
+   }
+
+   .link-box {
+      height: 30px;
+      width: 30px;
+   }
+
+   .img-portrait {
+      border-radius: 50%;
+      background-image: url('/img/C.png');
+      background-size: 32px 32px;
+      height: 32px;
+      width: 32px;
+   }
+
+</style>
+
+<body>
+   <div class="flex-container">
+      <div class="pad-top"></div>
+      <div class="top-bar">
+         <div class="top-bar btns">
+            <a href="#">About</a>
+            <a href="#">Store</a>
+         </div>
+         <div class="top-bar btns">
+            <div><a href="#">Gmail</a></div>
+            <div><a href="#">Images</a></div>
+            <div class="spacer"></div>
+            <div class="img-special spacer">
+               <a class="link-box" href="#"></a>
+            </div>
+            <div class="spacer"></div>
+            <div class="img-portrait"></div>
+            <div class="spacer"></div>
+         </div>
+      </div>
+      <div class="logo">
+         <img src="/img/googlelogo.png">
+      </div>
+      <div class="search-area">
+         <form action="" method="get">
+            <input class="srchBox" id="search" maxlength="2048" type="text" name="name">
+         </form>
+      </div>
+      <div class="top-bar s-btn" style="padding-bottom: 22px;">
+         <form action="" method="get">
+            <input type="submit" value="Google Search">
+         </form>
+         <div class="spacer"></div>
+         <form action="" method="get">
+            <input type="submit" value="I'm Feeling Lucky">
+         </form>
+      </div>
+   </div>
+</body>
+
+<footer>
+   <div class="flex-container">
+      <div class="bot-bar">
+         <div class="bot-bar-link">
+            <div class="bot-bar-link"><a href="#">Advertising</a></div>
+            <div class="spacer"></div>
+            <div class="bot-bar-link"><a href="#">Business</a></div>
+            <div class="spacer"></div>
+            <div class="bot-bar-link"><a href="#">How Search Works</a></div>
+         </div>
+         <div class="bot-bar-link">
+            <div class="bot-bar-link"><a href="#">Privacy</a></div>
+            <div class="spacer"></div>
+            <div class="bot-bar-link"><a href="#">Terms</a></div>
+            <div class="spacer"></div>
+            <div class="bot-bar-link"><a href="#">Settings</a></div>
+            <div class="spacer"></div>
+         </div>
+      </div>
+   </div>
+</footer>
+
+</html>
